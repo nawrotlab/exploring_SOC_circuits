@@ -146,8 +146,3 @@ def run(seed_param,trials_FOC, trials_SOC, num_KC, KC_baseline, odor_activation,
 
     return DAN_rate, MBONp_rate, MBONn_rate, KC_MBONp_weights, KC_MBONn_weights, KC_DAN_weights, test_results
 
-
-if __name__ == '__main__':
-
-    DAN_rate, MBONp_rate, MBONn_rate, KC_MBONp_weights, KC_MBONn_weights, KC_DAN_weights, test_results = run(seed_param=np.random.randint(1,999,1),trials_FOC=3, trials_SOC=3, num_KC=2000, KC_baseline=0, odor_activation=3, odor_FOC='odor1', odor_SOC='odor1_2', init_KCMBONp=0.083,
-            init_KCMBONn=0.083, initKCDAN=0.000505 , LR_KCMBONn=0.003333, LR_KCDAN=0.000677,DAN_activation=5.727273)
