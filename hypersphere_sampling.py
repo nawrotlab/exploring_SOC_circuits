@@ -85,7 +85,7 @@ def f_optimal(test_results,model_fct):
     if any(test_results['DAN_rate'] > 15) or any(test_results['MBONp_rate'] > 60) or any(test_results['MBONn_rate'] > 60) or any(test_results['DAN_rate'] < 0) or any(test_results['MBONp_rate'] < 0) or any(test_results['MBONn_rate'] < 0):
         return 0
 
-    if model_fct == run_model5:
+    if model_fct == run_model1:
         if (test_results['post FOC odor1'] == 1 and test_results['post FOC odor2'] == 0 and test_results[
             'post FOC odor3'] == 0 and test_results['post SOC odor1'] == 1 and test_results[
             'post SOC odor2'] >= 0.0221 and test_results['post SOC odor3'] == 0):
