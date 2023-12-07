@@ -7,7 +7,6 @@ import run_model3
 import run_model4
 import run_model5
 from tqdm import tqdm
-#import pandas as pd
 # argument parser for model selection
 import sys
 
@@ -58,13 +57,7 @@ def evaluate(points, f, f_optimal, base_parameter=np.nan, scale_parameter=np.nan
     points = points * scale_parameter + base_parameter  # transforms z-scored points to original parameters
     # apply f to every point in points
     result= [f(point) for point in points]
-    #df = pd.DataFrame(result)
-    #append the points to the df in 4 columns
-    # df['point1'] = points[:,0]
-    # df['point2'] = points[:,1]
-    # df['point3'] = points[:,2]
-    # df['point4'] = points[:,3]
-
+   
 
     result = [f_optimal(point) for point in result] # list of ones and zeros of len(points)
 
